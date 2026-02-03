@@ -1,0 +1,26 @@
+[build-system]
+requires = ["scikit-build-core"]
+build-backend = "scikit_build_core.build"
+
+[project]
+name = "usdex"
+version = "2.2.0"
+
+[tool.pixi.workspace]
+name = "usdex"
+channels = ["conda-forge"]
+platforms = ["osx-arm64"]
+
+[tool.pixi.pypi-dependencies]
+usdex = { path = ".", editable = true }
+
+[tool.pixi.tasks]
+
+[tool.pixi.dependencies]
+cmake = ">=4.2,<4.3"
+cxxopts = ">=2.2,<2.3"
+doctest = ">=2.4,<2.5"
+ninja = ">=1.13.2,<2"
+openusd = ">=25.11,<26"
+pybind11 = ">=2.11,<2.12"
+python = ">=3.11,<3.12"

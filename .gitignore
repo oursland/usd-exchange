@@ -31,3 +31,9 @@ version.rc
 deps/usd-deps.packman.xml
 include/usdex/core/Feature.h
 include/usdex/core/Version.h
+
+# pixi environments
+.pixi/*
+!.pixi/config.toml
+
+build/
